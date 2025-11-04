@@ -1,0 +1,506 @@
+{
+  "top_contributors": [
+    {
+      "name": "Stephanie Petersen",
+      "closed_items": 14,
+      "total_items": 14,
+      "effort_points": 0.0,
+      "completion_rate": 100.0
+    },
+    {
+      "name": "Alex Harvey",
+      "closed_items": 11,
+      "total_items": 11,
+      "effort_points": 0.0,
+      "completion_rate": 100.0
+    },
+    {
+      "name": null,
+      "closed_items": 10,
+      "total_items": 16,
+      "effort_points": 0.0,
+      "completion_rate": 62.5
+    },
+    {
+      "name": "Octavio Castro",
+      "closed_items": 2,
+      "total_items": 2,
+      "effort_points": 0.0,
+      "completion_rate": 100.0
+    },
+    {
+      "name": "Shelly Reida",
+      "closed_items": 2,
+      "total_items": 2,
+      "effort_points": 0.0,
+      "completion_rate": 100.0
+    },
+    {
+      "name": "Paul Golden",
+      "closed_items": 2,
+      "total_items": 2,
+      "effort_points": 0.0,
+      "completion_rate": 100.0
+    },
+    {
+      "name": "Adrian Fernandez",
+      "closed_items": 2,
+      "total_items": 2,
+      "effort_points": 0.0,
+      "completion_rate": 100.0
+    },
+    {
+      "name": "Alexandra Frields",
+      "closed_items": 2,
+      "total_items": 2,
+      "effort_points": 0.0,
+      "completion_rate": 100.0
+    },
+    {
+      "name": "Carissa Gappa",
+      "closed_items": 1,
+      "total_items": 1,
+      "effort_points": 0.0,
+      "completion_rate": 100.0
+    },
+    {
+      "name": "Mitchell Hoppe",
+      "closed_items": 1,
+      "total_items": 1,
+      "effort_points": 0.0,
+      "completion_rate": 100.0
+    }
+  ],
+  "repo_focus": [
+    {
+      "repository": "Lighthouse-io/api",
+      "pr_count": 201,
+      "merged": 128,
+      "open": 5,
+      "closed": 68,
+      "merge_rate": 63.681592039801,
+      "by_type": {
+        "Chore": 56,
+        "Feature": 45,
+        "Fix": 45,
+        "Flag": 7,
+        "Other": 42,
+        "Test": 6
+      }
+    },
+    {
+      "repository": "Lighthouse-io/web",
+      "pr_count": 171,
+      "merged": 133,
+      "open": 3,
+      "closed": 35,
+      "merge_rate": 77.77777777777779,
+      "by_type": {
+        "Chore": 17,
+        "Feature": 59,
+        "Flag": 15,
+        "Test": 4,
+        "Fix": 47,
+        "Other": 29
+      }
+    },
+    {
+      "repository": "Lighthouse-io/serverless",
+      "pr_count": 115,
+      "merged": 90,
+      "open": 3,
+      "closed": 20,
+      "merge_rate": 78.26086956521739,
+      "by_type": {
+        "Chore": 28,
+        "Fix": 41,
+        "Other": 8,
+        "Feature": 38
+      }
+    },
+    {
+      "repository": "Lighthouse-io/mobile",
+      "pr_count": 67,
+      "merged": 45,
+      "open": 2,
+      "closed": 20,
+      "merge_rate": 67.16417910447761,
+      "by_type": {
+        "Chore": 2,
+        "Fix": 18,
+        "Other": 32,
+        "Feature": 15
+      }
+    },
+    {
+      "repository": "Lighthouse-io/cloudfront-image-transformer",
+      "pr_count": 21,
+      "merged": 15,
+      "open": 2,
+      "closed": 4,
+      "merge_rate": 71.42857142857143,
+      "by_type": {
+        "Chore": 12,
+        "Fix": 2,
+        "Other": 2,
+        "Feature": 5
+      }
+    },
+    {
+      "repository": "Lighthouse-io/developers",
+      "pr_count": 19,
+      "merged": 15,
+      "open": 3,
+      "closed": 1,
+      "merge_rate": 78.94736842105263,
+      "by_type": {
+        "Feature": 9,
+        "Chore": 2,
+        "Fix": 2,
+        "Other": 6
+      }
+    },
+    {
+      "repository": "Lighthouse-io/sdk-js",
+      "pr_count": 14,
+      "merged": 8,
+      "open": 5,
+      "closed": 1,
+      "merge_rate": 57.14285714285714,
+      "by_type": {
+        "Chore": 8,
+        "Feature": 4,
+        "Fix": 1,
+        "Other": 1
+      }
+    },
+    {
+      "repository": "Lighthouse-io/team",
+      "pr_count": 8,
+      "merged": 4,
+      "open": 4,
+      "closed": 0,
+      "merge_rate": 50.0,
+      "by_type": {
+        "Feature": 6,
+        "Chore": 2
+      }
+    },
+    {
+      "repository": "Lighthouse-io/hall-pass",
+      "pr_count": 4,
+      "merged": 3,
+      "open": 1,
+      "closed": 0,
+      "merge_rate": 75.0,
+      "by_type": {
+        "Chore": 2,
+        "Other": 2
+      }
+    },
+    {
+      "repository": "Lighthouse-io/public-form-web",
+      "pr_count": 3,
+      "merged": 3,
+      "open": 0,
+      "closed": 0,
+      "merge_rate": 100.0,
+      "by_type": {
+        "Feature": 2,
+        "Chore": 1
+      }
+    }
+  ],
+  "team_distribution": {
+    "Stephanie Petersen": {
+      "percentage": 10.294117647058822,
+      "items": 14
+    },
+    "Alex Harvey": {
+      "percentage": 8.088235294117647,
+      "items": 11
+    },
+    "null": {
+      "percentage": 11.76470588235294,
+      "items": 16
+    },
+    "Octavio Castro": {
+      "percentage": 1.4705882352941175,
+      "items": 2
+    },
+    "Shelly Reida": {
+      "percentage": 1.4705882352941175,
+      "items": 2
+    },
+    "Paul Golden": {
+      "percentage": 1.4705882352941175,
+      "items": 2
+    },
+    "Adrian Fernandez": {
+      "percentage": 1.4705882352941175,
+      "items": 2
+    },
+    "Alexandra Frields": {
+      "percentage": 1.4705882352941175,
+      "items": 2
+    },
+    "Carissa Gappa": {
+      "percentage": 0.7352941176470588,
+      "items": 1
+    },
+    "Mitchell Hoppe": {
+      "percentage": 0.7352941176470588,
+      "items": 1
+    },
+    "Rebekah Jordan": {
+      "percentage": 0.7352941176470588,
+      "items": 1
+    },
+    "Shital Bhagwat": {
+      "percentage": 4.411764705882353,
+      "items": 6
+    },
+    "John Heislman": {
+      "percentage": 0.7352941176470588,
+      "items": 1
+    },
+    "Wilde Valdez": {
+      "percentage": 1.4705882352941175,
+      "items": 2
+    },
+    "Neil Barlow": {
+      "percentage": 0.7352941176470588,
+      "items": 1
+    },
+    "James Washkuhn": {
+      "percentage": 1.4705882352941175,
+      "items": 2
+    },
+    "Miguel Abaquin": {
+      "percentage": 0.7352941176470588,
+      "items": 1
+    },
+    "Carrie Powers": {
+      "percentage": 0.7352941176470588,
+      "items": 1
+    },
+    "Sebastian Villanueva": {
+      "percentage": 0.7352941176470588,
+      "items": 1
+    },
+    "Carla Guzman": {
+      "percentage": 0.7352941176470588,
+      "items": 1
+    },
+    "Manuel Murga": {
+      "percentage": 0.7352941176470588,
+      "items": 1
+    },
+    "Nicholas Watkins": {
+      "percentage": 0.7352941176470588,
+      "items": 1
+    },
+    "Chris Bloom": {
+      "percentage": 2.941176470588235,
+      "items": 4
+    },
+    "Bryan Ramirez": {
+      "percentage": 0.7352941176470588,
+      "items": 1
+    },
+    "Canan Cetin": {
+      "percentage": 0.7352941176470588,
+      "items": 1
+    },
+    "Madhavee Buddhiprabha": {
+      "percentage": 2.2058823529411766,
+      "items": 3
+    },
+    "Jose Siles": {
+      "percentage": 0.7352941176470588,
+      "items": 1
+    },
+    "Smita Goel": {
+      "percentage": 0.7352941176470588,
+      "items": 1
+    },
+    "Jorge Garcia": {
+      "percentage": 1.4705882352941175,
+      "items": 2
+    },
+    "Rebeca Pereira": {
+      "percentage": 0.7352941176470588,
+      "items": 1
+    },
+    "Mandeep Shergill": {
+      "percentage": 0.7352941176470588,
+      "items": 1
+    },
+    "Shalitha Dhananjaya": {
+      "percentage": 0.7352941176470588,
+      "items": 1
+    },
+    "Tahera Shorna": {
+      "percentage": 0.7352941176470588,
+      "items": 1
+    },
+    "Sanjeewa Gunarathna": {
+      "percentage": 0.7352941176470588,
+      "items": 1
+    },
+    "Cristian Chavez": {
+      "percentage": 0.7352941176470588,
+      "items": 1
+    },
+    "Dhanuka Abeysinghe": {
+      "percentage": 0.7352941176470588,
+      "items": 1
+    },
+    "Daniel Fletcher": {
+      "percentage": 0.7352941176470588,
+      "items": 1
+    },
+    "Jason Johnsen": {
+      "percentage": 3.6764705882352944,
+      "items": 5
+    },
+    "Erik Pardo": {
+      "percentage": 1.4705882352941175,
+      "items": 2
+    },
+    "Amila hettiarachchi": {
+      "percentage": 11.029411764705882,
+      "items": 15
+    },
+    "Julia Villegas": {
+      "percentage": 0.7352941176470588,
+      "items": 1
+    },
+    "Osman Condori": {
+      "percentage": 0.7352941176470588,
+      "items": 1
+    },
+    "Ryan Lenagh": {
+      "percentage": 0.7352941176470588,
+      "items": 1
+    },
+    "Shweta Boddupalli": {
+      "percentage": 0.7352941176470588,
+      "items": 1
+    },
+    "Roy Ortiz": {
+      "percentage": 1.4705882352941175,
+      "items": 2
+    },
+    "Ryan Markus": {
+      "percentage": 0.7352941176470588,
+      "items": 1
+    },
+    "Ninoshka Ovando": {
+      "percentage": 0.7352941176470588,
+      "items": 1
+    },
+    "Daniel Rojas": {
+      "percentage": 0.7352941176470588,
+      "items": 1
+    },
+    "Madhuwarushini Yoganathan": {
+      "percentage": 0.7352941176470588,
+      "items": 1
+    },
+    "Surangaa Wijayarathna": {
+      "percentage": 2.941176470588235,
+      "items": 4
+    },
+    "Kalana De Silva": {
+      "percentage": 0.7352941176470588,
+      "items": 1
+    },
+    "Rad Mami": {
+      "percentage": 0.7352941176470588,
+      "items": 1
+    },
+    "Ariel Lopez": {
+      "percentage": 0.7352941176470588,
+      "items": 1
+    },
+    "Ishara Aththanayake": {
+      "percentage": 0.7352941176470588,
+      "items": 1
+    },
+    "Fernando Padilla": {
+      "percentage": 0.7352941176470588,
+      "items": 1
+    },
+    "Miguel Calvimonte": {
+      "percentage": 0.7352941176470588,
+      "items": 1
+    },
+    "Raymundo Guaraguara": {
+      "percentage": 0.7352941176470588,
+      "items": 1
+    }
+  },
+  "workload_balance": [
+    {
+      "name": "Alex Harvey",
+      "total_effort": 0.0,
+      "avg_effort": 0.0,
+      "items": 11
+    },
+    {
+      "name": "Carissa Gappa",
+      "total_effort": 0.0,
+      "avg_effort": 0.0,
+      "items": 1
+    },
+    {
+      "name": "Mitchell Hoppe",
+      "total_effort": 0.0,
+      "avg_effort": 0.0,
+      "items": 1
+    },
+    {
+      "name": null,
+      "total_effort": 0.0,
+      "avg_effort": 0.0,
+      "items": 16
+    },
+    {
+      "name": "Octavio Castro",
+      "total_effort": 0.0,
+      "avg_effort": 0.0,
+      "items": 2
+    },
+    {
+      "name": "Stephanie Petersen",
+      "total_effort": 0.0,
+      "avg_effort": 0.0,
+      "items": 14
+    },
+    {
+      "name": "Shelly Reida",
+      "total_effort": 0.0,
+      "avg_effort": 0.0,
+      "items": 2
+    },
+    {
+      "name": "Jason Johnsen",
+      "total_effort": 0.0,
+      "avg_effort": 0.0,
+      "items": 5
+    },
+    {
+      "name": "Rebekah Jordan",
+      "total_effort": 0.0,
+      "avg_effort": 0.0,
+      "items": 1
+    },
+    {
+      "name": "Shital Bhagwat",
+      "total_effort": 0.0,
+      "avg_effort": 0.0,
+      "items": 6
+    }
+  ]
+}

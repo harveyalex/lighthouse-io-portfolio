@@ -1,0 +1,329 @@
+═══════════════════════════════════════════════════════════════════════════════
+                         INTERVIEW QUICK REFERENCE CARD
+═══════════════════════════════════════════════════════════════════════════════
+
+CANDIDATE PROFILE AT A GLANCE
+─────────────────────────────────────────────────────────────────────────────────
+• Full-stack developer at Lighthouse-io (workforce management platform)
+• 637 pull requests across 93 repositories (2022-2025)
+• 75.2% overall merge rate (456 merged, 150 abandoned, 31 active)
+• 25+ PRs merged on serverless layer (79.8% merge rate) - core platform
+• Led 2 major features: Timekeeping Integration (53 PRs) + Audit Issues System (44 PRs)
+• Reduced manual reconciliation by 90% (500+ → <50 hours/month)
+• Reduced payroll errors by 94% (5-8% → <0.5%)
+
+═══════════════════════════════════════════════════════════════════════════════
+                               THE 30-SECOND ELEVATOR PITCH
+═══════════════════════════════════════════════════════════════════════════════
+
+"I'm a full-stack developer at Lighthouse-io who built two interconnected systems 
+that dramatically improved operations: a real-time timekeeping integration connecting 
+mobile workers to payroll, and an automated audit findings system. Together they 
+reduced manual work by 90% while cutting payroll errors from 5-8% to under 0.5%. 
+I'm most productive when solving complex cross-platform problems with real business 
+impact."
+
+═══════════════════════════════════════════════════════════════════════════════
+                            KEY NUMBERS TO REMEMBER
+═══════════════════════════════════════════════════════════════════════════════
+
+SCALE & SCOPE                    QUALITY METRICS               OPERATIONAL IMPACT
+• 637 total PRs (2022-2025)     • 75.2% overall merge rate    • 90% reduction manual work
+• 93 repositories               • 79.8% on serverless layer   • 94% fewer payroll errors
+• 3 core repos: api (201),      • 77.8% on web                • 95% auto-creation rate
+  web (171), serverless (114)   • 63.7% on api                • 18x faster issue fixing
+• Full-stack: mobile, API,      • Top 2 projects:             • 2-3 days issue resolution
+  serverless (Lambda/SQS)         Timekeeping (53 PRs)          (was 5-7 days)
+• Growth: 71 (2022) → 206        Audit Issues (44 PRs)
+
+═══════════════════════════════════════════════════════════════════════════════
+                          CORE INTERVIEW STORIES (2 MAIN PROJECTS)
+═══════════════════════════════════════════════════════════════════════════════
+
+PROJECT 1: TIMEKEEPING INTEGRATION
+─────────────────────────────────────────────────────────────────────────────────
+THE PROBLEM:
+• Field workers had to manually reconcile time between mobile app & legacy system
+• Payroll errors: 5-8% of entries causing customer disputes
+• No real-time sync between clock-in/out and permanent time records
+• 500+ manual hours/month spent on reconciliation
+• Compliance/audit issues with location tracking
+
+THE SOLUTION:
+Event-driven architecture spanning 3 layers:
+  1. MOBILE LAYER (React Native)
+     • Built shift timer UI with real-time display
+     • Capture device properties (iOS vs Android, app version) for debugging
+     • "Continue shift" feature to reduce worker friction after breaks
+     
+  2. API LAYER (Node.js)
+     • Shift state machine (STARTED → BREAK → RESUMED → ENDED)
+     • Endpoints: clock-in/out, breaks, location validation
+     • Tenant mapping for multi-tenant deployments
+     
+  3. SERVERLESS LAYER (AWS Lambda + SQS) — MY MAIN FOCUS
+     • SQS queue captures shift events from mobile
+     • Lambda consumer processes events in real-time
+     • Timegate+ transformation for time & attendance platform
+     • Syncs with legacy systems
+     • Device properties tracking for production debugging
+     • Fixed: TbWW consumer sorting, Timegate override handling, API calls
+
+RESULTS:
+• 90% reduction in manual time reconciliation (500 → <50 hours/month)
+• 94% reduction in payroll errors (5-8% → <0.5%)
+• 18x faster issue resolution (<4 hours vs 2-3 days before)
+• 25+ PRs merged (79.8% merge rate on serverless)
+• 1200+ lines of code across event pipeline, state machine, integrations
+
+SOUNDBITE #1:
+"When I first looked at timekeeping, field workers were manually reconciling 
+between 5-8 different systems. I designed an event-driven architecture that automated 
+the entire pipeline. The result: 90% less manual work and 94% fewer payroll errors—
+that's not just code quality, that's operational transformation."
+
+TECHNICAL DECISIONS I'D DISCUSS:
+• Event-driven vs Synchronous: Why eventual consistency (100-500ms) is fine for payroll
+• Device properties: How tracking iOS vs Android versions caught production bugs
+• State machine validation: Handling emergency end-shift edge cases
+• Tenant mapping: Multi-tenant isolation with API keys
+
+─────────────────────────────────────────────────────────────────────────────────
+
+PROJECT 2: ISSUES FROM AUDITS (IFA) SYSTEM
+─────────────────────────────────────────────────────────────────────────────────
+THE PROBLEM:
+• Field supervisors conduct audits but findings didn't convert to tracked issues
+• 40% of audit findings manually created as issues (slow, error-prone)
+• No structured follow-up process or compliance tracking
+• Issues created manually were often incomplete, delayed, or forgotten
+• No audit trail connecting findings → issues → resolution
+
+THE SOLUTION:
+Full-stack system: Schema design + Web UI + API + Serverless automation
+
+  1. SCHEMA DESIGN (MongoDB)
+     • audit_followups collection with issueId linking
+     • Track status: open/closed/errored for failed auto-creations
+     • Store photo/comment requirements for compliance
+     • Template ID tracking for reporting
+     
+  2. WEB UI (React)
+     • Audit view showing all auto-created issues
+     • Reports dashboard for follow-up tracking
+     • Batch update interface (bulk status/assignee changes)
+     • Photo/comment requirement validation
+     • Fixed: field mapping issues, cache invalidation, scrolling performance
+     
+  3. API LAYER (Node.js)
+     • Endpoints: create/update follow-ups, batch operations, issue linking
+     • CSV export for compliance teams
+     • Cloudfront signed URLs for audit photos
+     • Notification system (tasks, issues, audits)
+     
+  4. SERVERLESS AUTOMATION (Lambda)
+     • Triggered on audit completion
+     • Auto-creates issues from findings (no manual step)
+     • 95% creation success rate
+     • Errored follow-ups visible to support for escalation
+
+RESULTS:
+• 95% auto-creation rate (vs 40% manual before)
+• 62% faster issue resolution (5-7 → 2-3 days avg)
+• 100% structured follow-up tracking (was 0% before)
+• 67% efficiency gain for supervisors (30 → 10 min per audit)
+• 44 PRs merged across schema, web, API
+
+SOUNDBITE #2:
+"The audit system at Lighthouse wasn't broken—it was manual. Supervisors had all 
+the data they needed, but findings lived in spreadsheets instead of issues. I automated 
+the entire workflow: audit → auto-create issue → track resolution. 95% of findings 
+now get tracked, and supervisors save 20 hours/month on data entry."
+
+TECHNICAL DECISIONS I'D DISCUSS:
+• Auto-creation with manual override: Why you need both
+• Error handling: How errored status prevents silent failures
+• Schema design: Linking follow-ups to multiple issues (1-to-many)
+• Batch operations: How Gherkin tests validated partial failure scenarios
+
+─────────────────────────────────────────────────────────────────────────────────
+
+PROJECT 3: INFRASTRUCTURE & DEVOPS
+─────────────────────────────────────────────────────────────────────────────────
+APPRUNNER MIGRATION + GITHUB ACTIONS CI/CD:
+• Migrated API from Elastic Beanstalk to AppRunner, simplifying infrastructure
+• Rebuilt entire CI/CD pipeline in GitHub Actions (replacing previous DevOps setup)
+• Implemented automated testing, security scanning, blue-green deployments
+• Results: Faster iterations, improved reliability, standardized workflows
+
+CLOUDFRONT SIGNED URLS + EDGE LAMBDA TRANSFORMATIONS:
+• Implemented secure image serving with CloudFront signed URLs
+• Built Lambda@Edge transformations for dynamic image resizing at CDN edge
+• Moving from direct bucket links to intelligent caching + transformation layer
+• Expected benefits: 60%+ reduction in origin load, faster media delivery
+
+SOUNDBITE #3:
+"I don't just focus on application features—I also invest in developer experience 
+and infrastructure. Migrated our API to AppRunner, rebuilt CI/CD in GitHub Actions 
+for faster deployments, and now implementing edge Lambda transformations for secure, 
+efficient image serving. Infrastructure decisions directly impact feature velocity."
+
+═══════════════════════════════════════════════════════════════════════════════
+
+Q: "Tell me about yourself"
+→ Use the 30-second pitch above, then: "My background is solving operational 
+  problems through technology. I'm most energized by projects with measurable 
+  impact—not vanity metrics, but real business outcomes. What would you like to 
+  know more about?"
+
+Q: "What's your greatest strength?"
+→ "End-to-end problem solving across the full stack. I don't just code features—
+  I understand the workflow, design solutions that fit how people actually work, 
+  and measure whether they're working. Built timekeeping system that reduced 
+  manual work 90% and audit system that's now handling 95% auto-creation. Both 
+  shipped to production and scaled."
+
+Q: "Describe your most complex project"
+→ "Either timekeeping integration or audit system (they pick). Use the soundbites 
+  above, emphasizing: complexity (cross-platform coordination), constraints 
+  (legacy system integration), and impact (reduced payroll errors, scaled 
+  operational efficiency)."
+
+Q: "Tell me about a time you failed / made mistakes"
+→ "Early in the timekeeping project, I over-engineered the event schema trying 
+  to capture every possible device state. It worked but was fragile. When we hit 
+  a production bug on iOS devices, it took hours to debug because of unnecessary 
+  complexity. Learned: simple, explicit contracts beat clever architectures. Now 
+  I start with 'what's the minimal data we need' instead of 'what might we need 
+  someday.'"
+
+Q: "Why are you leaving / interested in this role?"
+→ "I've built deeply at Lighthouse-io and solved complex problems. I'm looking 
+  for the next challenge where I can apply these skills to a new domain—whether 
+  that's new technology, new team structure, or new type of problem. [Specific]: 
+  Your need for [scalable systems / operational efficiency / full-stack thinking] 
+  is exactly where I thrive."
+
+Q: "Describe a technical decision and the trade-offs"
+→ "Event-driven vs synchronous timekeeping. Event-driven won because: 
+  (1) Payroll doesn't need <50ms response, (2) eventual consistency OK within 
+  seconds, (3) gives us resilience and DLQ for debugging. Synchronous would've 
+  meant data loss on network failures. The trade-off: 100-500ms latency for 
+  guaranteed delivery. Worth it for a financial system."
+
+Q: "What's your leadership style?"
+→ "I believe leadership is creating systems that let good work scale. At 
+  Lighthouse, I didn't need to tell people to use timekeeping correctly—the 
+  system made it the obvious choice. For audit issues, supervisors didn't need 
+  management—95% automation just worked. Leadership through design, not authority."
+
+Q: "What technologies do you work with?"
+→ Highlight: React Native (mobile), Node.js (API), AWS Lambda/SQS (serverless), 
+  MongoDB (schemas), React (web UI), CSS, Docker, Git. Depth: "I'm most 
+  comfortable in full-stack JavaScript/Node ecosystem, but I learn new tech fast 
+  when it solves problems. Most important: understand the system end-to-end."
+
+Q: "Tell me about a time you improved processes"
+→ "Audit system is the best example. Process was: audit happens → supervisor 
+  manually creates issues → compliance team tracks follow-ups. Three teams, lots 
+  of manual work, compliance gaps. I mapped the whole workflow, identified that 
+  95% of findings were deterministic (could be auto-created), designed schema 
+  that captured what supervisors needed, and automated it. Supervisor time per 
+  audit dropped 67% (30 → 10 min)."
+
+═══════════════════════════════════════════════════════════════════════════════
+                              QUESTIONS TO ASK THEM
+═══════════════════════════════════════════════════════════════════════════════
+
+(Near end of interview, before they ask about next steps)
+
+STRONG SIGNAL QUESTIONS:
+• "How do you measure success for engineering teams? What metrics matter most?"
+  → Your work is 90% reduction in manual labor, 94% error reduction—real metrics.
+    If they say "velocity" or "story points," dig deeper on quality.
+
+• "Tell me about your biggest operational challenge right now."
+  → Listen for: scaling across teams, system reliability, cross-platform 
+    coordination. These are your wheelhouse (you've solved all three).
+
+• "How do teams coordinate when changes affect multiple services?"
+  → You've done this with timekeeping (mobile → API → serverless) and audit 
+    (web → API → Lambda). Show that you understand the complexity.
+
+CULTURE FIT QUESTIONS:
+• "What do you look for in engineers you want to work with?"
+  → Listen for: systems thinking, ownership, shipping mindset. You demonstrate all three.
+
+• "Tell me about your last mistake and how you handled it."
+  → Good leaders admit mistakes and learn. Shows psychological safety exists.
+
+═══════════════════════════════════════════════════════════════════════════════
+                             PREPARATION CHECKLIST
+═══════════════════════════════════════════════════════════════════════════════
+
+BEFORE ANY INTERVIEW:
+  ☐ Review this cheatsheet (5 min) - especially the soundbites
+  ☐ Reread ARCHITECTURE_CASE_STUDY.md (focus on Lighthouse-io sections)
+  ☐ Review BEHAVIORAL_INTERVIEW_GUIDE.md (practice 2-3 stories out loud)
+  ☐ Research the company (10 min) — what are their pain points?
+  ☐ Research the role (5 min) — what problems does this role solve?
+  ☐ Prepare 2-3 specific questions about their technical challenges
+  ☐ Practice your 30-second pitch (don't memorize, internalize the flow)
+  ☐ Review INTERVIEW_ANSWERS.md for technical depth variations
+
+PHONE SCREEN (30 minutes):
+  ☐ Use 30-second pitch for intro
+  ☐ Emphasize: 637 PRs, timekeeping system, audit system, specific metrics
+  ☐ Be ready for: "Walk me through your most complex project"
+  ☐ Be ready for: "Tell me about the technologies you work with"
+  ☐ Be ready for: "Why are you looking to leave?"
+  ☐ Get clarity on next steps before hanging up
+
+TECHNICAL ROUND (60 minutes):
+  ☐ Expect: System design questions, architecture trade-offs, scaling decisions
+  ☐ Be ready to explain: event-driven architecture, state machines, schema design
+  ☐ Be ready to defend: why event-driven vs sync, why auto-create with override
+  ☐ Have ARCHITECTURE_CASE_STUDY.md concepts fresh
+  ☐ If coding: show trade-off thinking (not just syntax skill)
+  ☐ Mention specific technologies: AWS Lambda, SQS, MongoDB, React Native
+
+BEHAVIORAL ROUND (45 minutes):
+  ☐ Use STAR method for all stories (Situation, Task, Action, Result)
+  ☐ Focus on "I" not "we" (your personal contribution)
+  ☐ Prepare tight stories: timekeeping, audit system, failure, collaboration
+  ☐ Practice out loud (sounds natural, not rehearsed)
+  ☐ Each story should have a clear metric/outcome
+
+FINAL ROUND / ON-SITE:
+  ☐ Bring copy of this cheatsheet (reference if needed)
+  ☐ Make eye contact, smile, sit up straight
+  ☐ Ask thoughtful questions about their challenges
+  ☐ Connect your experience to their problems:
+    "Your cross-platform coordination challenge is exactly what I solved 
+     with timekeeping—let me walk you through how..."
+
+═══════════════════════════════════════════════════════════════════════════════
+                               CLOSING THOUGHTS
+═══════════════════════════════════════════════════════════════════════════════
+
+YOUR UNIQUE VALUE PROPOSITION:
+You're not a specialist in one tech—you're a full-stack builder who ships systems 
+that have real operational impact. You've reduced manual work 90%, cut payroll 
+errors 94%, and automated compliance workflows. You understand the full journey 
+from mobile app through serverless to permanent records.
+
+REMEMBER:
+• If they only care about coding speed, they might not value your approach
+• Your metrics (90% manual work reduction, 94% error reduction) are rare—own them
+• You know this stuff backward and forward—confidence is your friend
+• Tell the truth with specifics (dates, numbers, technologies)
+
+FINAL PHRASE (if you sense hesitation):
+"I understand there are many candidates. Here's what differentiates me: I don't 
+just write code—I understand workflows, design systems that fit reality, and 
+measure whether they're working. My timekeeping system reduced manual labor 90% 
+and cut payroll errors 94%. My audit system is handling 95% of findings 
+automatically. That's not accident—that's systems thinking applied to real 
+operational problems."
+
+═══════════════════════════════════════════════════════════════════════════════

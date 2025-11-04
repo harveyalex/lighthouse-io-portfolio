@@ -1,0 +1,316 @@
+================================================================================
+CONTRIBUTION INTELLIGENCE SYSTEM - FILE MANIFEST
+================================================================================
+
+Session: November 4, 2025
+Location: /Users/alexharvey/development/my-contributions/
+Total Files: 18
+
+================================================================================
+DOCUMENTATION FILES (8)
+================================================================================
+
+1. README.md (11 KB)
+   - Master documentation
+   - System overview and architecture
+   - Usage examples and integration patterns
+   - Performance metrics and scalability info
+   PURPOSE: Start here for complete system understanding
+
+2. INDEX.md (6.6 KB)
+   - System index and quick reference
+   - File descriptions and capabilities
+   - Integration examples
+   PURPOSE: Navigate system components
+
+3. QUICKSTART.md (2.7 KB)
+   - 5-minute quick start guide
+   - Essential setup steps
+   - Common commands
+   PURPOSE: Get started quickly
+
+4. AZURE_DEVOPS_SETUP.md (3.0 KB)
+   - Detailed Azure DevOps configuration
+   - PAT token creation steps
+   - MCP deployment instructions
+   PURPOSE: Set up Azure DevOps integration
+
+5. WORKITEMS_SUMMARY.md (4.7 KB)
+   - All 102 unique work item IDs
+   - Organized by number range
+   - Most frequently used items
+   PURPOSE: Work item reference
+
+6. SESSION_SUMMARY.md (15 KB)
+   - Complete session documentation
+   - Completed tasks and findings
+   - Performance metrics
+   PURPOSE: Session overview and results
+
+7. FILE_MANIFEST.txt (This file)
+   - Complete file listing
+   - Descriptions and purposes
+   PURPOSE: File organization reference
+
+8. prs.md (94 KB)
+   - Basic PR listing
+   - 637 pull requests sorted by date
+   - Quick reference format
+   PURPOSE: Backup PR data
+
+================================================================================
+ANALYSIS REPORTS (4)
+================================================================================
+
+9. ANALYTICS_REPORT.md (3.6 KB)
+   - Comprehensive statistics
+   - 637 PRs analyzed
+   - Repository distribution
+   - Work item analysis
+   - Most active items (top 20)
+   PURPOSE: Statistical overview
+
+10. analytics_data.json (27 KB)
+    - Machine-readable analytics
+    - Raw statistics
+    - Repository breakdown
+    - Status analysis
+    PURPOSE: Data export for external tools
+
+11. RELEASE_NOTES.md (12 KB)
+    - 455 merged PRs organized by repository
+    - Cleaned PR titles
+    - Direct GitHub links
+    - Quick summary table
+    PURPOSE: Release documentation
+
+12. IMPACT_ANALYSIS.md (570 B)
+    - High-activity repository assessment
+    - Risk analysis
+    - Repository distribution
+    - Change metrics
+    PURPOSE: Impact and risk assessment
+
+================================================================================
+PYTHON SCRIPTS (4)
+================================================================================
+
+13. generate_reports.py (11 KB)
+    LANGUAGE: Python 3
+    PURPOSE: Generate analytics reports
+    USAGE: python3 generate_reports.py [--stats] [--output FILE]
+    OUTPUT: ANALYTICS_REPORT.md, analytics_data.json
+    CAPABILITIES:
+      - PR parsing from markdown
+      - Statistical analysis
+      - Repository grouping
+      - Work item correlation
+
+14. generate_release_notes.py (5.2 KB)
+    LANGUAGE: Python 3
+    PURPOSE: Generate release notes and impact analysis
+    USAGE: python3 generate_release_notes.py
+    OUTPUT: RELEASE_NOTES.md, IMPACT_ANALYSIS.md
+    CAPABILITIES:
+      - Release note generation
+      - Title cleaning
+      - Repository grouping
+      - Impact metrics
+
+15. fetch_workitems.py (7.8 KB)
+    LANGUAGE: Python 3
+    PURPOSE: Fetch Azure DevOps work item details
+    USAGE: python3 fetch_workitems.py [--ids ID...] [--output FILE] [--limit N]
+    REQUIREMENTS: AZURE_DEVOPS_PAT environment variable
+    DEPENDENCIES: azure-devops package
+    CAPABILITIES:
+      - Azure DevOps API connection
+      - Batch work item queries
+      - Metadata extraction
+      - JSON export
+
+16. extract_workitems.py (3.3 KB)
+    LANGUAGE: Python 3
+    PURPOSE: Extract work item IDs from PR data
+    USAGE: python3 extract_workitems.py
+    OUTPUT: workitem_queries.json, work item listing
+    CAPABILITIES:
+      - Work item ID extraction
+      - ID deduplication
+      - Batch query generation
+
+================================================================================
+DATA FILES (2)
+================================================================================
+
+17. prs-enhanced.md (177 KB)
+    - Enhanced PR listing with work item links
+    - 637 total pull requests
+    - Work item correlations (252 PRs with items)
+    - Status: merged (455), closed (150), open (31), unreleased (1)
+    COLUMNS: PR Number | Title | Work Item | Repository | Status | Date
+    PURPOSE: Primary PR data source
+
+18. workitem_queries.json (1.5 KB)
+    - Batch query template for Azure DevOps
+    - Pre-populated with 102 work item IDs
+    - Field definitions for queries
+    PURPOSE: Batch work item query template
+
+================================================================================
+CONFIGURATION FILES (1)
+================================================================================
+
+19. opencode.json (Sample - in parent directory)
+    - OpenCode MCP configuration
+    - Azure DevOps MCP settings
+    - Organization: teamsoftwareinc
+    PURPOSE: MCP integration setup
+
+================================================================================
+UTILITIES (1)
+================================================================================
+
+20. test_connection.py (1.3 KB)
+    - Test Azure DevOps connection
+    - Verify PAT token validity
+    - Test work item fetching
+    PURPOSE: Connection validation
+
+================================================================================
+ENVIRONMENT
+================================================================================
+
+Python Version: 3.13.3
+Virtual Environment: /Users/alexharvey/development/my-contributions/venv/
+Packages Installed:
+  - azure-devops (7.0+)
+  - msrest (0.7.1+)
+
+================================================================================
+DATA STATISTICS
+================================================================================
+
+PR Statistics:
+  Total PRs: 637
+  Merged: 455 (71.4%)
+  Closed: 150 (23.5%)
+  Open: 31 (4.9%)
+  Unreleased: 1 (0.2%)
+
+Work Item Statistics:
+  Unique Work Items: 102
+  PRs with Work Items: 252 (39.6%)
+  PRs without Work Items: 385 (60.4%)
+  Single-PR Items: 57 (55.9%)
+  Multi-PR Items: 45 (44.1%)
+
+Repository Statistics:
+  Total Repositories: 20
+  Top 3: api (201), web (171), serverless (113)
+
+File Sizes:
+  Total Documentation: ~54 KB
+  Total Reports: ~43 KB
+  Total Scripts: ~27 KB
+  Total Data: ~274 KB
+
+================================================================================
+QUICK NAVIGATION
+================================================================================
+
+For Setup:
+  → QUICKSTART.md
+  → AZURE_DEVOPS_SETUP.md
+
+For Understanding:
+  → README.md
+  → INDEX.md
+  → SESSION_SUMMARY.md
+
+For Analysis:
+  → ANALYTICS_REPORT.md
+  → analytics_data.json
+
+For Release:
+  → RELEASE_NOTES.md
+  → IMPACT_ANALYSIS.md
+
+For Development:
+  → generate_reports.py
+  → generate_release_notes.py
+  → fetch_workitems.py
+
+For Reference:
+  → prs-enhanced.md
+  → WORKITEMS_SUMMARY.md
+  → FILE_MANIFEST.txt (this file)
+
+================================================================================
+USAGE PATTERNS
+================================================================================
+
+Pattern 1: View Analytics
+  $ cd /Users/alexharvey/development/my-contributions
+  $ cat ANALYTICS_REPORT.md
+
+Pattern 2: Generate Reports
+  $ python3 generate_reports.py
+  $ cat ANALYTICS_REPORT.md
+
+Pattern 3: Generate Release Notes
+  $ python3 generate_release_notes.py
+  $ cat RELEASE_NOTES.md
+
+Pattern 4: Test Azure DevOps Connection
+  $ python3 test_connection.py
+
+Pattern 5: Fetch Work Items
+  $ python3 fetch_workitems.py --limit 10
+
+================================================================================
+MAINTENANCE
+================================================================================
+
+Update Reports:
+  $ python3 generate_reports.py
+  $ python3 generate_release_notes.py
+
+Verify Data:
+  $ python3 generate_reports.py --stats
+
+Test Setup:
+  $ python3 test_connection.py
+
+Generate Custom Analysis:
+  Edit generate_reports.py or create custom script using:
+    from generate_reports import PRAnalyzer
+    analyzer = PRAnalyzer()
+
+================================================================================
+SUPPORT & DOCUMENTATION
+================================================================================
+
+File Organization: This manifest (FILE_MANIFEST.txt)
+Getting Started: QUICKSTART.md
+Complete Guide: README.md
+System Overview: INDEX.md
+Setup Help: AZURE_DEVOPS_SETUP.md
+Session Results: SESSION_SUMMARY.md
+
+Questions? Start with README.md → QUICKSTART.md → specific guides
+
+================================================================================
+STATUS
+================================================================================
+
+System Status: ✅ Production Ready
+Last Updated: November 4, 2025
+All Tasks: ✅ Completed
+Documentation: ✅ Complete
+Scripts: ✅ Tested and Working
+Data: ✅ Verified (637 PRs, 102 Work Items)
+
+================================================================================
+END OF MANIFEST
+================================================================================

@@ -1,0 +1,42 @@
+{
+  "total_items": 136,
+  "items_by_state": {
+    "Closed": 74,
+    "New": 7,
+    "Design": 34,
+    "In Progress": 12,
+    "Ready": 6,
+    "Removed": 1,
+    "Delivered": 1,
+    "QA Active": 1
+  },
+  "items_by_type": {
+    "User Story": 31,
+    "Task": 32,
+    "Bug": 6,
+    "Support Request": 11,
+    "Epic": 2,
+    "Test Case": 42,
+    "Test Suite": 12
+  },
+  "items_with_effort": 0,
+  "items_with_priority": 107,
+  "effort_by_type": {},
+  "completion": {
+    "closed": 74,
+    "total": 136,
+    "completion_rate": 54.41176470588235
+  },
+  "pr_stats": {
+    "total_prs": 637,
+    "prs_with_work_items": 252,
+    "prs_without_work_items": 385,
+    "correlation_ratio": 39.56043956043956
+  },
+  "timeline": {
+    "earliest_change": "2022-05-23T13:37:04.240000+00:00",
+    "latest_change": "2025-11-02T22:05:44.720000+00:00",
+    "active_days": 1259,
+    "items_per_day": 0.05877680698967434
+  }
+}
